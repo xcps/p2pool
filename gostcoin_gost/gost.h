@@ -39,10 +39,10 @@
 extern "C" {
 #endif
 
-extern void hash_256(const unsigned char *message,
+void hash_256(const unsigned char *message,
 							unsigned long long length,
 							unsigned char *out);
-extern void hash_512(const unsigned char *message,
+void hash_512(const unsigned char *message,
 							unsigned long long length,
 							unsigned char *out);
 
