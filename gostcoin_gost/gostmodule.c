@@ -14,7 +14,10 @@ static PyObject *gost_getpowhash(PyObject *self, PyObject *args)
 
     // scrypt_1024_1_1_256((char *)PyString_AsString((PyObject*) input), output);
     // const unsigned char *
-    hash_256((const unsigned char *)PyString_AsString((PyObject*) input), output);
+    hash_256(
+		(const unsigned char *)PyString_AsString((PyObject*) input), 
+		(unsigned long long)PyString_Size((PyObject*) input),
+		(unsigned char *)output);
     Py_DECREF(input);
     value = Py_BuildValue("s#", output, 32);
     PyMem_Free(output);
