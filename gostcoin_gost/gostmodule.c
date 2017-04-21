@@ -15,7 +15,7 @@ static PyObject *gost_getpowhash(PyObject *self, PyObject *args)
 	sph_gost512(
 		(unsigned char *)digest,
 		(const unsigned char *)PyString_AsString((PyObject*) input),
-		(unsigned long long)PyString_Size((PyObject*) input)
+		80
 	);
 	sph_gost256(
 		(unsigned char *)hash,
