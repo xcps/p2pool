@@ -1,6 +1,6 @@
 from distutils.core import setup, Extension
 
-ltc_scrypt_module = Extension('ltc_scrypt',
+gst_gost_module = Extension('gst_gost',
                                sources = ['gostmodule.c',
                                           'gost.c'],
                                include_dirs=['.'])

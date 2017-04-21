@@ -1,5 +1,7 @@
 #include <Python.h>
 
+#include "gost.h"
+
 static PyObject *gost_getpowhash(PyObject *self, PyObject *args)
 {
     char *output;
@@ -24,6 +26,6 @@ static PyMethodDef GostMethods[] = {
     { NULL, NULL, 0, NULL }
 };
 
-PyMODINIT_FUNC initltc_gost(void) {
+PyMODINIT_FUNC initgst_gost(void) {
     (void) Py_InitModule("gst_gost", GostMethods);
 }
